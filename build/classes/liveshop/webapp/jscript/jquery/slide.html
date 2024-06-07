@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<title>Insert title here</title>
+	<script>
+		/*
+		sildeup,Down,slideToggle : 파람값으로는 speed, callback 주면됨
+		*/
+		$(document).ready(function(){
+			$("#flip").click(function(){
+				$("#panel").slideDown('slow');
+			});
+		});
+		
+		//animate() : speed, callback; 단 파라미터를 줄때 반드시 {속성 : '값'} 형식으로 줘야 합니다.
+		
+		$(document).ready(function(){
+			$("button").click(function(){
+				$("#ani").animate({left : '350px	'});
+			});
+		});
+	</script>
+	<style>
+		#flip,#panel{
+			padding: 5px;
+			text-align: center;
+			background-color: cyan;
+			border: 1px solid darkgray;
+		}
+		#panel{
+			padding: 50px;
+			display: none;
+		}
+	</style>
+</head>
+
+<body>
+	<p>jquery Effect 알아보기</p>
+	<div id="flip">Panel 의 내용 보기</div>
+	<div id="panel">Hello World!!</div>
+	
+	<div style="background-color: orangered; height: 100px; width: 100px; position: absolute;" id="ani"></div>
+	<button>start animation</button>
+</body>
+
+</html>

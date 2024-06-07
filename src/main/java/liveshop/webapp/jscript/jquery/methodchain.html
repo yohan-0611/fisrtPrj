@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<title>Insert title here</title>
+<script>
+	/*
+	메서드 체인: 테스트 했던 effect 효과의 모든 메서드는 체인형식으로 한번에 처리할 수 있습니다.
+	ex>('p').css('text-color','white').hide(2*1000)...식으로
+	다중 효과를 주고 싶다면 이 체인 방법을 이용하세요
+	*/
+	$(document).ready(function () {
+			$('button').click(function () {
+				$('#p1').css('color','red').slideUp(2*1000);
+				});
+			});
+</script>
+</head>
+<body>
+<p id="p1">jquery is easy to study!!!</p>
+<button>click</button>
+</body>
+</html>

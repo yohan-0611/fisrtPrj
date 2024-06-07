@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script>
+/*
+동적 노드 생성..
+노드를 생성할떄 기준이 있는데, 요소를 생성할지, 요소내의 컨텐트를 생성할지에 따라 메서드 명이 조금 틀립니다.
+기본적으로 요소를 생성하는 기본 메서드가 있는데, createElement("요소명") 입니다.
+이후 생성된 요소에 동적으로 content를 생성할때는 createTextNode("content") 를 이용해서 합니다.
+
+또한, appendChild(), insertBefore() 등의 다영한 메서드등을 이용햇 노드리스트의 끝, 중간등에 넣울 수 있습니다/
+
+하나씩 예를 보면서 할게요.
+
+중요!! 모든 컨텐트는 반드시 요소 노드가 생성된 이후에 추가되어야합니다. 그냥 컨텐트나 속성을 준다고 자동 생성되지 않음.
+
+*/
+</script>
+</head>
+<body>
+<div id="div1">
+	<p id="p1">이건 첫번째 구문</p>
+	<p id="p2">이건 두번째 구문</p>
+</div>
+
+
+<script>
+	const para = document.createElement("p");
+	const tnode = document.createTextNode("집에 가고 싶다");
+	const p1 = document.getElementById('p1');
+	para.appendChild(tnode);
+	document.getElementById('div1').insertBefore(para,p1);
+	
+	const rm = document.getElementById('p2');
+	rm.remove();
+	
+	
+</script>
+</body>
+</html>

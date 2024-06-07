@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="../../JQ/jquery-3.js"></script>
+	<script>
+		/*
+		jQuery 사용법 : 소스를 다운받아서 특정 경로에 넣어 스크립트 태그를 이용 import 하기
+		
+		or CDN 방식(인터넷이 가능하다는 조건으로), 구글,MS,Jquery site 등 다른곳의 Jquery url 을 script 선언부에 선언하는 방식
+		
+		위 두개중 하나만 하면 됩니다. 단, 어떤걸 하던, jquery 라이브러리 외 다른 스크립트 코드는 동시에 import 하면 않됨.
+		
+		Jquery 기본 문법 : 기본적으로 이벤트 타겟을 지정하고, 이벤트와 연결 후 핸들러를 정의 하는 문법이 기본입니다.
+		아래의 예를 보면, 문서가 모두 로드가 되면 호출되는 콜백함수인 ready()를 통해서 p 요소를 선택(모든 p)후
+		이벤트 등록(click), 핸들러를 익명 함수를 정의후 this 를 통해서 jquery 의 여러 메서드중, hide()(감추기)를 호출한 예시입니다.
+		여기서 기억 할건, Jquery 는 반드시 모든 문서가 로드된 이후에 실행이 되어야 합니다, 따라서 특별한 경우가 아닐시,
+		$(document).ready() 가 기본으로 사용됩니다
+		
+		$(function){
+			//이문법도 가능하지만 .... 위의 문법이 가독성이 더 좋음.
+			});
+		}
+		*/
+		/*$(document).ready(function(){
+			$('p').click(function(){		
+				$(this).hide();	
+			});
+		});*/
+		$(document).ready(function () {
+
+			$('button').click(function () {
+				$('.test').hide();
+			});
+		});
+		
+		$(document).ready(function () {
+
+			$('button').click(function () {
+				$('ul li:nth-child(2n + 1)').addClass('test');
+			});
+		});
+
+	</script>
+	<style>
+		.test {
+			color: white;
+			background-color: gray;
+		}
+	</style>
+</head>
+
+<body>
+	<p>헬로우 JQUERY... 날 클릭하면 난 사라짐1.</p>
+	<p>헬로우 JQUERY... 날 클릭하면 난 사라짐2.</p>
+	<p>헬로우 JQUERY... 날 클릭하면 난 사라짐3.</p>
+	<p class="test">헬로우 JQUERY... 날 클릭하면 난 사라짐4.</p>
+	<button>클릭하세요</button>
+	
+	<p>List 1
+		<ul>
+			<li>커피</li>
+			<li>홍차</li>
+			<li>밀크티</li>
+		</ul>
+	</p>
+	
+	<p>List 2
+		<ul>
+			<li>커피</li>
+			<li>홍차</li>
+			<li>밀크티</li>
+		</ul>
+	</p>
+</body>
+
+</html>

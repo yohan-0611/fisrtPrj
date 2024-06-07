@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="author" content="나경">
+   <title>게시판</title>
+
+	<link rel="stylesheet" href="./bootstrap.min.css">
+	<link rel="stylesheet" href="./bootstrap.min.js">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="./project.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+	<link rel="canonical" href="https://getbootstrap.kr/docs/5.3/examples/footers/">
+
+
+	<script src="./project.js"></script>
+   <style>
+    
+     
+
+      table {
+         width: 100%;
+         border-collapse: collapse;
+         margin-top: 20px;
+         text-align: center;
+      }
+
+      td {
+         border: 1px solid rgb(216, 203, 168);
+         text-align: center;
+         padding: 100px;
+      }
+
+      th {
+         border: 1px solid rgb(246, 233, 168);
+         background-color: rgb(216, 203, 168);
+         padding: 50px;
+      }
+
+      #top {
+         padding: 10px;
+      }
+
+
+      /* 여기부터는 사이트 메인 부분*/
+
+
+      h1 {
+         font-weight: 900px;
+         text-align: left;
+      }
+
+
+      body {
+         margin: 20px;
+      }
+
+
+
+
+      .write-button {
+         background-color: rgb(216, 203, 168);
+         color: white;
+         padding: 10px 20px;
+         border: none;
+         border-radius: 4px;
+         cursor: pointer;
+         font-size: 16px;
+         float: right;
+      }
+
+
+      .size {
+         padding: 5px;
+      }
+
+      p {
+         margin: 0px;
+         font-size: 20px;
+      }
+   </style>
+   <script>
+
+
+
+      function url() {
+         window.location.href = "./pan.html"
+      }
+
+
+
+
+
+
+   </script>
+</head>
+
+<body>
+<!--네비게이션 시작-->
+	<header style="height: 200px;" class="header">
+		<h1 class="header_logo" style="margin-top: 40px;">무한도전</h1>
+	</header>
+
+	<nav>
+		<a href="./home.html" style="margin-left: 200px;"><b>HOME</b></a>
+		<a href="./about.html" target="_blank"><b>프로그램 소개</b></a>
+		<a href="./pan.html" target="_blank"><b>시청자 게시판</b></a>
+		<a href="./jjal.html" target="_blank"><b>짤</b></a>
+		<a href="./legend.html" target="_blank"><b>화제의 영상</b></a>
+		<a href="./login.html" style="float: right;" target="_blank"><b>LOGIN</b></a>
+		<a href="./singup.html" style="float: right;" target="_blank"><b>회원가입</b></a>
+	</nav>
+	<!--네비게이션 끝-->
+
+
+
+   <br><br><br>
+
+
+   <h1>무한도전 게시판</h1>
+
+   <table>
+      <tr>
+         <th class="size">번호</th>
+         <th>제목</th>
+         <th>작성자</th>
+         <th>작성일</th>
+         <th>조회수</th>
+
+      </tr>
+
+      <tr>
+         <td id="top" class="size">번호</td>
+         <td id="top">사진이 안보여요</td>
+         <td id="top">yohan</td>
+         <td id="top">2023.12.5</td>
+         <td id="top">55</td>
+
+
+
+      <tr>
+         <td rowspan="2" class="size">글의 내용</td>
+         <td colspan="4">
+            <p>
+               정말 엄청나게 감사드립니다
+               꿈만같던2주였어요
+               아내고 애들이고 뒷전이고
+               나를 찾아가는 시간이었어요
+               정말로 감사드립니다
+
+               방송시간때문에 편집할수밖에없는거알아요
+               그치만 노래를 따라부르다가 끊겨서ㅠ
+               너무아쉬웠어요ㅠㅠ
+               풀버젼 무료가아닌 유로로라도
+               풀어주시면안될까요?
+               유투브말구요ㅠㅠ
+               저희는 DVD소장 굉장히 좋아합니다ㅠㅠ
+
+               밤새 영상보고
+               좋아서미칠것만같은 club h.o.t. 였습니다
+
+               아,
+               형들
+               이글을보진않겠지만
+               건너건너 귀에들어갔으면 좋겠어요
+               단독콘서트 꼭 해주세요
+               가고싶어하는사람 갈사람이 굉장히 많아요
+               저의 평생 한을 풀어주세요
+               사랑해요</p>
+         </td>
+      </tr>
+
+
+
+
+
+
+   </table>
+
+
+   <div class="button-container">
+      <button class="write-button" onclick="url();">목록으로 돌아가기</button>
+   </div>
+
+
+
+</body>
+
+</html>

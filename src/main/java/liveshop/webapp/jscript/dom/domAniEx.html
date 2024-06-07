@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<style>
+	#container{
+		width: 600px;
+		height: 600px;
+		position: relative;
+		background-color: aqua;
+	}
+	
+	#animate{
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		background-color: orangered;
+	}
+</style>
+</head>
+<body>
+	<p>
+		<button onclick="move();">클릭해주세요</button>
+	</p>
+	
+	<div id="container">
+		<div id="animate">
+			
+		</div>
+	</div>
+	<script>
+		function move(){
+			//interval 을 끝내도록 id 변수 선언...
+			let id = null;
+			
+			//요소 객체 얻어내기..
+			let elem = document.getElementById('animate');
+			
+			let pos = 0;
+			
+			clearInterval(id);
+			
+			//interval 실행 및 id 대입;
+			id = setInterval(()=>{
+				if(pos==550){
+					clearInterval(id);
+				}
+				else{
+					//사선으로 다운되는 형태를 만들기 위해 위치값을 조정하면서 그 값을 누적시킴/..
+					//참고로 사선은 top --> bottom, left --> right 로 이동하는 것이므로,top,left 좌표만 이동시키면 됨..
+					pos++;
+					elem.style.top = pos + "px";
+					elem.style.left = pos + "px";
+					}
+			},5);
+		}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<script type="module">
+import message from "./message.js";
+import {name,age} from  "./person.js";
+
+let text = "내 이름은" + name + " 이고 나이는" + age + "입니다";
+console.log(text);
+document.getElementById('demo').innerHTML = message();
+
+</script>
+
+</body>
+</html>

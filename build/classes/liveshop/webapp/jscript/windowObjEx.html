@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viqpewport" content="width=device-width, initial-scale=1.0">
+	<title>Insert title here</title>
+</head>
+
+<body>
+	<h2>window 객체의 속성과 메서드 보기</h2>
+	<p id="demo">open 메서드를 이용한 팝업</p>
+	<script>
+		const uri = "notice.html?name=요한";
+		const encoded = encodeURI(uri);
+		let isOp = window.open(encoded, "pop", "width=300,height=300 top = 100 left = 100");
+		if (isOp == null) {
+			alert("차단을 해제해주세요")
+		}
+
+		console.log(isOp);
+	</script>
+	<button onclick="pop.window.close();">팝업닫기</button>
+</body>
+
+</html>

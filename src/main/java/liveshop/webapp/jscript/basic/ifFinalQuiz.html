@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>숫자 맞추기 게임(몇번에 맞췄는지를 출력하도록 하는 게임입니다)</title>
+<script>
+	const ran = Math.round(Math.random()*99)+1;
+	let cnt = 1;
+	function guess(){
+		/*이 함수 내부에는 랜덤값 1 ~ 100사이로 생성해서,그값을 사용자가 예측후 값을 넣고, 버튼을 클릭하면 그 값이 랜덤값과 같으면 
+		끝나는 게임입니다. 만약 입력한 값이 랜던값 보다 작으면 작다, 크면 ___크다라고, 아래 힌트 input 요소에 메세지를 넣어주고,
+		시도할떄마다 시도횟수(count) 가 1씩 증가합니다. 이 값을 아래 시도횟수 input 요소의 값에 계속 업데이트 해줘야 합니다.*/
+		console.log(ran);
+		let ran2 = parseInt(document.getElementById('user').value);
+		
+		if(ran2 == ran){
+			document.getElementById('result').value = "정답입니다";		
+		}
+		else if(ran > ran2){
+			document.getElementById('result').value = "작습니다";
+		}
+		
+		else{
+			document.getElementById('result').value = "큽니다";
+		}
+		
+		document.getElementById('guessCnt').value = cnt++;
+		return true;
+		
+	}
+</script>
+</head>
+<body>
+
+<h2>숫자 맞추기 게임</h2>
+<p>
+랜덤한 숫자가 발생합니다. 이 숫자를 여러분이 맞추는 게임이고, 결과시도 횟수(count)가 여러분이
+시도할 때마다 누적되어 나오게 됩니다.
+</p>
+
+<form>
+	숫자 : <input type="text" id="user" size="5">
+	<input type="button" value="확인" onclick="guess();">
+	시도횟수(추측횟수) : <input type="text" id="guessCnt" size="5">
+	힌트 : <input type="text" id="result" size="16">
+	
+</form>
+</body>
+</html>

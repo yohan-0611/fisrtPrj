@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="demo">
+		Hello World
+		<!--여긴 주석-->
+		<output id="result">연산전 내용...</output>
+	</div>
+	
+	<script>
+		let node = document.querySelector('body').firstChild;
+		
+		//각 정보를 표시할 문자열 생성		
+		let result = "<br> 노드 이름 : <br>";
+		
+		while(node){
+			result+= `${node.Name} : ${node.nodeValue}<br>`;
+			node = node.nextSibling;
+			
+		}
+		
+		const output = document.getElementById('result');
+		output.innerText = result;
+	</script>
+
+</body>
+</html>

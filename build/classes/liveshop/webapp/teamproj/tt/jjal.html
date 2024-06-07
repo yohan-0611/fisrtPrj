@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>무한도전 짤</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+   <!-- 업데이트 사진들 칸 안에다가 넣기
+   사진들 정렬하기
+   
+	   -->
+    <style>
+		
+
+        body {
+
+            font-family: 'Arial', sans-serif;
+
+            text-align: center;
+
+        }
+
+        h1 {
+
+            color: royalblue;
+}
+
+        h3 {
+            color: blue;
+            text-align: left;
+        }
+
+        .photo {
+            margin: 10px;
+            max-width: 300px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+
+        .gallery {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+
+            margin-top: 20px;
+
+        }
+
+        .gallery img {
+
+            max-width: 60%;
+
+            height: 60%;
+
+            margin: 10px;
+
+        }
+
+        #keyword-buttons {
+
+            margin-bottom: 50px;
+			margin-top: 50px;
+            
+
+        }
+
+        #search-container {
+            margin-bottom: 20px;
+        }
+
+        #search-input {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        #search-button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: blueviolet;
+            color: burlywood;
+            border: none;
+            border-radius: auto;
+        }
+
+        
+
+    </style>
+
+</head>
+
+<body>
+
+
+
+
+
+
+    <h1>짤 모음집</h1>
+
+
+
+
+<br>
+<br>
+<!--<div id="search-container">
+	<input type="text" id="search-input" placeholder="멤버 이름을 입력하세요.">
+	<button onclick="searchImages()" id="search-button">검색</button>
+	
+	
+</div>
+-->
+
+
+<h3>업데이트 photo</h3>
+
+   <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="images/side/1.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="col-3">
+                        <img src="images/side/2.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="col-3">
+                        <img src="images/side/3.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="col-3">
+                        <img src="images/side/4.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="images/side/5.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="col-3">
+                        <img src="images/side/6.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="col-3">
+                        <img src="images/side/7.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="col-3">
+                        <img src="images/side/8.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+<button type="button" onclick="showImages('유재석')" class="btn btn-outline-primary">유재석</button>
+<button type="button" onclick="showImages('박명수')" class="btn btn-outline-secondary">박명수</button>
+<button type="button" onclick="showImages('정준하')" class="btn btn-outline-success">정준하</button>
+<button type="button" onclick="showImages('정형돈')" class="btn btn-outline-danger">정형돈</button>
+<button type="button" onclick="showImages('하하')" class="btn btn-outline-warning">하하</button>
+<button type="button" onclick="showImages('노홍철')" class="btn btn-outline-info">노홍철</button>
+<button type="button" onclick="showImages('길')" class="btn btn-outline-dark">길</button>
+
+
+
+    <div class="gallery" id="image-container">
+
+        
+
+    </div>
+
+
+
+    <script>
+
+        function showImages(keyword) {
+
+            
+ 			
+            let container = document.getElementById('image-container');
+
+            container.innerHTML = '';
+
+
+
+           
+
+            switch (keyword) {
+
+                case '박명수':
+
+                    addImage('images/park/1_5.jpg');
+
+                    addImage('images/park/2_5.jpg');
+
+                    addImage('images/park/3_5.jpg');
+
+                    
+
+                    break;
+
+                case '유재석':
+
+                    addImage('images/you/1_6.jpg');
+
+                    addImage('images/you/2_6.jpg');
+
+                    addImage('images/you/3_6.jpg');
+
+                    
+
+                    break;
+
+                case '길':
+
+                    addImage('images/gil/1_1.jpg');
+
+                    addImage('images/gil/2_1.jpg');
+
+                    addImage('images/gil/3_1.jpg');
+
+                    
+
+                    
+
+                    break;
+
+                case '하하':
+
+                    addImage('images/haha/1_2.jpg');
+
+                    addImage('images/haha/2_2.jpg');
+
+                    addImage('images/haha/3_2.jpg');
+
+                   
+
+                   
+
+                    break;
+
+                case '노홍철':
+
+                    addImage('images/no/1_4.jpg');
+
+                    addImage('images/no/2_4.jpg');
+
+                    addImage('images/no/3_4.jpg');
+
+                   
+
+                    
+
+                    break;
+
+                case '정준하':
+
+                    addImage('images/junha/1_3.jpg');
+
+                    addImage('images/junha/2_3.jpg');
+
+                    addImage('images/junha/3_3.jpg');
+                    addImage('images/junha/4.jpg');
+
+                   
+
+                   
+
+                    break;
+
+                case '정형돈':
+
+                    addImage('images/don/1.jpg');
+
+                    addImage('images/don/2.jpg');
+
+                    addImage('images/don/3.jpg');
+
+                   
+
+                   
+
+                    break;
+
+                default:
+
+                    break;
+
+            }
+
+        }
+
+
+
+        function addImage(src) {
+            var container = document.getElementById('image-container');
+            var img = document.createElement('img');
+            img.src = src;
+            img.alt = '이미지';
+            container.appendChild(img);
+        }
+        
+        
+
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script>
+	function checkForm(myForm){
+		console.log(myForm.id.value.length);
+		return false;
+		//모든 input 요소의 값 길이가 8 ~ 15 사이면 true 리턴, 아니면 false 리턴 시키세요.
+		/*let a = document.getElementById('id').value.length
+		let b = document.getElementById('pw').value.length
+		let c = document.getElementById('addr').value.length
+		
+		if(a >= 8 && a <= 15 && b >= 8 && b <= 15 && c >= 8 && c <= 15){
+			return true;
+		}
+		
+		else{
+			return false;
+		}*/
+		
+	}
+	function idEvt(id,eventObj){
+		console.log(eventObj.key);
+		let length = id.value.length;
+		setTimeout(()=>{
+			if(length > 8){
+				id.style.backgroundColor="yellow"
+			}
+		},1000)
+	}
+</script>
+</head>
+<body>
+<h2>회원가입폼</h2>
+<!--모든 요소에 이벤트가 발생되면, 발생된 이벤트의 상세 내용을 담은 이벤트 객체를 OS 가 생성해서 다음순으로 throw 합니다.
+이벤트 발생 ==> OS 감지 및 이벤트 객체 생성(이벤트의 상세 내용을 속성 및 메서드로 생성함)
+이벤트 객체를 브라우저로 전달함 ==> 브라우저내부에 있는 VM 이 이벤트 객체를 받아서 이벤트 핸들러 함수에 자동으로 전달함-->
+<!--DOM 에서는 document 하위 객체로 Form 객체가 있고, 그 하위에는 각종 input 요소들로 관리됩니다.
+단, 반드시 form 내부에 위치해야 하는 조건이 있고요...
+이 말은 폼 하위의 요소는 폼객체를 부모로 두고 있다는 말입니다.
+
+-->
+<form name="f" id="f" onsubmit="return checkForm(this);" method="post" action="doSome.jsp">
+	ID <input name="id"
+		placeholder="id 입력(8~15)"
+	 	size="30"
+	 	id="id"
+	 	onkeyup="idEvt(this,event);"
+	   ><br>
+	   
+	PW <input name="pw" placeholder="첫자영문+숫자포함8~15" size="30" id="pw"><br>
+	주소 <input name="addr" placeholder="주소입력" size="50" id="addr"><br>
+	<input type="submit"><input type="reset">
+	
+	
+</form>
+</body>
+</html>

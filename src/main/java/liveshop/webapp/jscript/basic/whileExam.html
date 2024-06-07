@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Insert title here</title>
+</head>
+
+<body>
+	<script>
+		//while 루프 : for 와는 다른 형식. 일반적으로 무한루프를 반복하다가 특정 시점에 종료되는 루프로 사용함.
+		//내부적으로 제어하는 로직은 이전에 했던, if, switch-case 를 통해 continue, break 를 이용해서 제어합니다.
+		//주의!! for 와는 틀리게, while(조건식) --> 조건식에 사용되는 변수는 블락내에서 선언된 변수를 사용하면 에러입니다.
+		//때문에 반드시 초기화 후 사용하세요. 초기화된 변수는 내부 실행블락에서 사용 가능합니다.
+		/*let i =0;
+		while(i < 10){//모든 조건,루프문에서 {}을 사용하지 않으면 바로 첫 실행문만 루프 or 조건문의 소유가됩니다.
+			if(i % 2==0)	
+			document.write("aa");
+			document.write("bb");
+			
+			document.write("카운트 :" + i++);
+		}*/
+		let kor, eng, math;
+		let total = 0;
+		let subCnt = 0;
+
+		while (true) {
+			if (subCnt == 0) {
+				kor = parseInt(prompt("국어점수 입력", "0~100점사이"));
+				if (!kor || kor === undefined || kor > 100 || kor < 0) {
+					alert("점수가 틀렸습니다");
+					//continue;
+				} else {
+					subCnt++;
+					total += kor;
+				}
+
+			}if (subCnt == 1) {
+				eng = parseInt(prompt("영어점수 입력", "0~100점사이"));
+				if (!eng || eng === undefined || eng > 100 || eng < 0) {
+					alert("점수가 틀렸습니다");
+				} else {
+					subCnt++;
+					total += eng;
+				}
+
+			}if(subCnt==2){
+				math = parseInt(prompt("수학점수 입력", "0~100점사이"));
+				if (!math || math === undefined || math > 100 || math < 0) {
+					alert("점수가 틀렸습니다");
+				} else {
+					subCnt++;
+					total += math;
+					break;
+				}
+			}
+		}
+		document.write("총점은" + total + "점입니다")
+	</script>
+</body>
+
+</html>

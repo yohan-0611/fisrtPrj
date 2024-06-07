@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title id="demo">
+		이건 문서 제목
+	</title>
+	<script>
+		//theTitle = document.getElementById('demo').firstChild.nodeValue;
+		/*
+		Node 를 순회할때 사용되는 대표적 속성...알아두면 좋음..
+		parentNode
+		childNodes[nodeNumb]
+		firstChild
+		lastChild
+		nextSibling
+		previousSibling
+		*/
+		theTitle = document.getElementById('demo').childNodes[0].nodeValue;
+	/*
+			alert(theTitle);
+			
+			nodeName 속성 : 읽기전용속성이며, 요소에 적용시엔 요소명 (ex h1 ==> H(항상대문자임))
+			attribute node 에 사용되며, 속성명리턴
+			text node : 언제나 #text	
+			
+			node value 속성
+			Node 가 요소(element) 이면, null 리턴
+			text 노드라면 text 그자체
+			속성 노드라면 속성 값 리턴.(좀 있다가 getter(), setter() 를 이용한 속성 제어를 할거임.. 이거 더 편함)
+			*/
+
+	</script>
+</head>
+
+<body>
+	<h1 id="id01">이건 h1 내용</h1>
+	<p id="id02"></p>
+	<img src="../../images/660026.png" id="i" width="300px" height="300px">
+	
+	<button onclick="chgAttrNode();">이미지 바꾸기</button>
+
+
+	<script>
+		//document.getElementById('id02').innerText = document.getElementById('id01').firstChild.nodeValue;
+		  document.getElementById('id02').innerText = document.getElementById('i').getAttribute("src");	
+		  
+		  let img = document.getElementById('i')
+		  
+		  function chgAttrNode(){
+			  let newPic = "../../images/logo1.png";
+			  img.setAttribute("src",newPic);
+			  
+		  }
+	</script>
+</body>
+
+</html>

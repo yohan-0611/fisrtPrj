@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<title>Insert title here</title>
+<style>
+	.ances *{
+		display: block;
+		border: 3px solid cyan;
+		color: grey;
+		padding: 5px;
+		margin: 15px;
+	}
+</style>
+<script>
+	$(document).ready(function(){
+	//$('h1').next().css({"color":"red", "border" : "2px solid red"})
+	//});
+	/*
+	인접 요소 찾기(sibling) : 인접요소를 찾는 메서드는 꽤 다양하게 준비되어 있음
+	대충 이름만 봐도 알수 있도록 정의됨
+	siblings() : 모든 인접 요소 리턴함. (컬렉션)
+	next() : 뭔지알죠?
+	nextAll() : 선택자 기준으로 이후 인접요소 모두 리턴
+	nextUntil() : 선택자 ~ 지정선택자 사이의 모든 인접요소 리턴
+	prev() : 알죠??
+	prevAll() : nextAll() 반대
+	prevUntil : ('지정선택자') : nextUntil() 반대
+	*/
+	
+	//filter 메서드 : 특정 조건에 부합되는 노드 리턴받기...
+	//대표적으로 first, last, not, eq 등이 있습니다. 이름보면 알겠지만
+	//first,last 는 부모입장 노드를 선택후 자식노드를 찾는것이고,
+	//not, eq 등의 형제 노드중에서 찾을떄 주로 사용됩니다.
+	//$('div').last().css({"color":"red", "border" : "2px solid red"})
+	
+	//eq(idx) : 요소중 같은 요소를 찾는데, index 에서 지정된 요소를 찾아서 리턴함. 인덱스 번호는 0번부터 시작함.
+	$('p').eq(1).css({"color":"red", "border" : "2px solid red"})
+	});
+</script>
+</head>
+<body>
+	<div class="ances">DIV  H1 의 부모
+		<p>p요소</p>
+		<span>스판요소</span>
+		<h1>h1 요소</h1>
+		<h1>h1 두번째 요소</h1>
+		<p>
+			두번쨰 요소
+		</p>
+		<p>
+			세번쨰 요소
+		</p>
+		</div>
+</body>
+</html>

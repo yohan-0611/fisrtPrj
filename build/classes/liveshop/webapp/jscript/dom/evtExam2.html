@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Insert title here</title>
+</head>
+
+<body style="margin: 0px;">
+	이름 넣어주세요 : <input id="id" ;>
+
+	<p id="demo"></p>
+	<div id="mydiv" style="width: 200px; height: 200px; border: 1px solid;" onmousemove="overF(event)" ;
+		onmouseout="clear1()" ;>
+	</div>
+
+	<img src="../../images/660026.png" width="32px" height="32px" style="border: 0px;"
+			onmouseover="bigImg(this)"
+			onmouseout="normImg(this)">
+
+	<script>
+		function overF(e) {
+			x = e.clientX;
+			y = e.clientY;
+
+			coor = "좌표 : ( x : " + x + "," + "y : " + y + ")";
+			document.getElementById('mydiv').innerHTML = coor;
+
+		}
+		function clear1() {
+			document.getElementById('mydiv').innerHTML = "";
+
+		}
+		const target = document.querySelector('input');
+
+		function upperCase() {
+			//const x = document.getElementById('id');
+			target.style.backgroundColor = "yellow"
+			target.value = target.value.toUpperCase();
+		}
+		target.addEventListener('click', upperCase);
+		target.addEventListener('change', upperCase);
+		target.addEventListener('select', () => {document.getElementById('demo').innerHTML = "문자열을 선택 했군요.."})
+		
+		function bigImg(x){
+			x.style.height = "64px";
+			x.style.width = "64px";
+		}
+		function normImg(x){
+			x.style.height = "32px";
+			x.style.width = "32px";
+		}
+
+	</script>
+</body>
+
+</html>

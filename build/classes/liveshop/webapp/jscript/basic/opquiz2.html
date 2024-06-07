@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-sca le=1.0">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		function cal(){
+			//alert('함수 호출됨');
+			let a = parseInt(document.getElementById('s1').value);
+			let b = parseInt(document.getElementById('s2').value);
+			let c = a + b;
+			document.getElementById('asd').innerHTML = a + "+" + b + "=" + c;	
+		} 
+		
+	</script>
+	<p id="asd"></p>
+		첫번째 점수 : <input type="text" name="s1" id="s1"><br>
+		두번째 점수 : <input type="text" name="s2" id="s2"><br>
+		
+		<button onclick="cal();">계산하기</button>
+
+</body>
+</html>

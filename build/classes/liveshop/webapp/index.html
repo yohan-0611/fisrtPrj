@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/mystyle.css">
+	<title>LiveShop Main Page</title>
+</head>
+
+<body>
+	<header>
+		<h1>
+			<img src="./images/shop.png" width="50px" height="50px">
+			<a href="index.html">Live Shop</a>
+		</h1>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="index.html">About us</a></li>
+				<li><a href="index.html">News</a></li>
+				<li><a href="index.html">My account</a></li>
+				<li><a href="index.html">Cotacts</a></li>
+			</ul>
+		</nav>
+	</header>
+	<!--End of Header-->
+
+	<!--Main Start-->
+	<aside id="left">
+		<h4>상품 카테고리</h4>
+		<ul>
+			<li><a href="./pord/coms/computer.html" target="iframe1">컴퓨터</a></li>
+			<li><a href="./pord/coms/clothing.html" target="iframe1">의류</a></li>
+			<li><a href="./pord/coms/music.html" target="iframe1">음악</a></li>
+			<li><a href="./pord/coms/movie.html" target="iframe1">영화</a></li>
+			<li><a href="./pord/coms/computer.html" target="iframe1">스포츠/레저</a></li>
+			<li><a href="./pord/coms/computer.html" target="iframe1">가구/인테리어</a></li>
+			<li><a href="./pord/coms/computer.html" target="iframe1">식품</a></li>
+		</ul>
+	</aside>
+
+	<!--메인 section 을 정의 예정입니다.
+	여기에는 카테고리별 상품들의 리스트가 뿌려질 예정입니다.
+	이 리스트에서 클릭하면, 각 상품의 상세로 링크될 예정입니다.
+	아래처럼 정의 하세요..참고로 section 과 article 은 순서가 바뀌어도 무방합니다. 즉 신경쓰지 마세요.
+	main 이란 id로 섹션을 정의하고, 내부에 article  이란 id 로 article 을 정의하세요.
+	article 내부엔 실제 상품 리스트가 뿌려질건데, iframe 을 이용할 예정입니다.
+	iframe tag를 정의 하시고, name 속성에 iframe1, src=computer.html
+	w(640), h(w의70%) seamless(프레임이 안보이도록 하는 속성)을 주세요-->
+	<section id="main">
+		<article id="article">
+			<iframe name="iframe1" src="./pord/coms/computer.html" width="640px" height="800px" seamless></iframe>
+		   <!-- <iframe src="https://www.google.com/maps/d/embed?mid=1fIN-UwIYurKrMXypTX9ZKgS3fnI&hl=en&ehbc=2E312F" width="640" height="480"></iframe>-->
+		</article>		
+	</section>
+	
+
+	<!--
+		우측 수직 메뉴는 아래처럼 정의하세요.
+		aside id = right
+		div를 이용해서 내부 컨텐츠를 넣을 예정입니다.
+		div id = shopcart 로
+		h4크기로 현재 장바구니에 담긴 품목 없음 이라고 하시고..여기까지 h4
+		쇼핑카트 보기 링크를 생성후에 클릭시 shopcart.html로 가도록 하세요
+	-->
+
+	<aside id="right">
+		<div id="shopcart">
+			<h4>현재 장바구니에 담긴 품목없음</h4>
+			<a href="shopcart.html">쇼핑카트 보기</a>
+		</div>
+		<!--우측 메뉴에는 위처럼 장바구니보기와, 로그인 폼을 같이 넣을겁니다
+		따라서 아래처럼 정의하세요.
+		div 생성(login id)
+		h4 크기로 Log in
+		form 정의.action은 login.jsp 로 하세요 메서드는 post
+		
+		아이디 text 타입으로 name id<br>
+		패스워드 password 타입으로 name pwd<br>
+		submit(로그인)과 reset(초기화) 버튼 생성<br>
+		
+		회원가입 할 수 있도록 링크 생성, register.html 새창으로 열리도록, id =register 로 주세요
+		비밀번호 분실 링크도 생성, 링크값은 #만 처리하세요
+		
+		-->
+		<div id="login">
+			<h4>Login</h4>
+			<form action="login.jsp" method="post" name="f1">
+				아이디 <input type="text" name="id"><br>
+				비밀번호 <input type="password" name="pwd"><br>
+				<input type="submit" value="로그인">
+				<input type="reset" value="초기화"><br>
+				<a href="register.html" target="_blank" id="register">회원가입</a>
+				<a href="#">비밀번호 분실</a>			
+			</form>		
+		</div>
+	</aside>
+	<footer>
+		@All Rights Reserved.. 나의 첫 홈페이지
+	</footer>
+
+
+</body>
+</html>

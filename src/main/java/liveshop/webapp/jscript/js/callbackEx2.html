@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+</head>
+<body>
+<p id ="demo"></p>
+
+<script>
+// 이번에는 배열을 이용해서 콜백 구조를 이해해봅니다.
+//먼저, 이 예제에서는 일반적인 자바스크립트에서 많이 사용하는 익명콜백(화살표 험수)를 이용할거고,
+//이 예제의 목표는 주어진 배열에서 양수만 추출 하도록 하는 기능을 하는 콜백을 정의 및 호출 하여 결과를 도출하도록
+//하는 것입니다, 꼭 이해해주세요.
+const myNumber =  [1,-1,2,-2,3,-3,4,-4,5,-5];
+
+const posiNumbers = removeNeg(myNumber,(x) => {return x >= 0});
+
+document.getElementById('demo').innerHTML = posiNumbers;
+
+	
+//아래는 양수만 추출하는 기능의 콜백 함수를 호출하는 함수를 정의하고, 그 결과(양수만 필터링된 배열)을 Ref 하는 변수를 두겠습니다.
+function removeNeg(numbers, callback){
+	const myArray = [];//양수만 담을 배열 초기화
+	
+	for(const x of numbers){
+		if(callback(x)){
+			myArray.push(x);
+		}
+	}
+	return myArray
+}	
+</script>
+</body>
+</html>

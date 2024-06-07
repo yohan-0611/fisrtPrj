@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>공지사항</h2>
+	<ul>
+		<li>스크립트 공부 하느라 고생이 많아요.</li>
+		<li>이번주까지 끝내도록 해봐요.</li>
+		<li>여러분 잘 따라오고 있으니 자신을 믿으세요</li>
+	</ul>
+	<button onclick="alert(opener.location.href)">창닫기</button>
+	<script>
+		console.log(location.search);
+		opener.document.getElementById('demo').innerHTML = "이건 자식이 바꾼내용..."
+		//location 객체 : window 객체의 속성으로 존재함. 하지만, 이 또한 객체로 속성과 메서드를 가지고 있다.
+		
+		//location 객체는 이름처럼, 브라우저에서 locator 창에 쓰이는 URL 정보등을 보내거나,
+		// 페이지를 리로드 하거나 하는 기능의 속성과 메서드를 보유 이중가장 많이 쓰이는게 href 속성 및 reload()이다.
+	</script>
+</body>
+</html>

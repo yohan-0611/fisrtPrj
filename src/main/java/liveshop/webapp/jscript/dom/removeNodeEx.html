@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+</head>
+<body>
+<div id="div1">
+	<p id="p1">이건 첫번째 구문</p>
+	<p id="p2">이건 두번째 구문</p>
+</div>
+
+<script>
+const parent = document.getElementById('div1');
+const newOne = document.createElement('p');
+const tNode = document.createTextNode("이건 대체될 p 의 내용");
+
+newOne.appendChild(tNode);
+const child = document.getElementById('p2');
+//parent.removeChild(child);
+//child.parentNode.removeChild(child);
+
+//노드 대체..replaceChild() : 부모에게 특정 노드대신 다른 노드로 대체(replace)시 사용되는 메서드.	
+parent.replaceChild(newOne,child);
+</script>
+</body>
+</html>

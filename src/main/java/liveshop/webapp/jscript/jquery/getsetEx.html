@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<title>Insert title here</title>
+	<script>
+		/*
+		text(), html() : 선택된 요소의 컨텐트를 리턴하거나 setting 할떄 사용함(innerHTML,innterText)
+		value() : input 요소의 값을 get, set 할떄 사용함(value)
+		/*
+	   text(), html() : 선택된 요소의 컨텐트를 리턴하거나 setting 할 때 사용함(innerHTML, innerText)
+	   value() : input 요소의 값을 get,set 할 때 사용함.(value)
+	   
+	   배열, forEach() : value,index,array itself를 사용하고 싶으면 콜백함수를 이용해서 받아서 처리합니다.
+	   
+	   위 3개의 jquey 메서드에도 콜백을 제공합니다. 파람으로는 2개를 자동으로 던져주는데
+	   
+	   첫번째 파라미터 정보는 현재 값을 가져오는 Node의 index를 리턴합니다.(기준은 NodeList에서 가져옵니다.)
+	   두번째 파라미터 정보는 기존에 있었던 값 or 컨텐트 정보를 던져줍니다.
+	   
+	   위 두개의 정보를 사용할 목적이라면, 콜백 함수를 정의해서 파라미터로 받은 후 처리합니다.
+	   */
+
+		$(document).ready(function () {
+			$('#b1').click(function () {
+				alert($('#p1').text("이건 새로운 내용입니다"));
+			});
+			$('#b2').click(function () {
+				alert($('#p2').html());
+			});
+			$('#b3').click(function () {
+				alert($('#name').val("have a good Weekend"));
+			});
+		});
+
+		const arr = [1, 2, 3];
+		arr.forEach(function (x, y, z) {
+			alert(y + x + z);
+		})
+		//콜백 함수를 이용한 node 정보 보기 예제
+
+		$(document).ready(function () {
+			$('#b4').click(function () {
+				($('#p1').text((idx, originText) => {
+					return "기존 Text" + originText + "이건 새로운 내용 : Hello world!!!(index :" + idx +")";
+				});
+			});
+
+				$('#b5').click(function () {
+
+				});
+				$('#b3').click(function () {
+
+				});
+			});
+	</script>
+</head>
+
+<body>
+	<p id="p1">이건 구문의 한 <b>내용</b> 입니다</p>
+	<p id="p2">이건 두번쨰 구문의 <b>두번째</b> <b>내용</b> 입니다</p>
+	이름 : <input id="name">
+	<button id="b1">Text 보기</button>
+	<button id="b2">Html 보기</button>
+	<button id="b3">input 보기</button>
+	<button id="b4">콜백 내용보기(text)</button>
+	<button id="b5">콜백 내용보기(html)</button>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Insert title here</title>
+	<style>
+		table th {
+			border-bottom: 1px solid orange;
+		}
+	</style>
+</head>
+
+<body>
+	<table border="1px">
+		<script>
+			let result;
+			
+			document.write("<tr>");
+			// 1부터 9까지의 행을 루핑하는 outer for 정의
+			for(let i = 2; i <= 9; i++) { // 1부터 9까지를 반복하도록 함
+			//첫 Row 시작후 th 를 이용해서 단출력함
+			document.write("<td>")
+			if(i%2==0){
+				document.write(i+"단시작<hr>");//두번째 Tr 시작
+				}
+				// 2단 부터 9단까지의 열을 루핑하는 inner for 정의
+				for (let j = 1; j <= 9; j++) { // 2단 부터 9단까지를 반복하도록 함
+					result = i * j;
+					if(i%2==0){
+						document.write( i, "*", j, " = ", result, "<br>");										
+						}
+						else if(i%2==1){
+							if(result%2==0){
+							document.write( i, "*", j, " = ", result, "<br>");
+							}				
+					}				
+				}
+					document.write("</td>");
+			}
+			document.write("</tr>");
+			
+				
+		</script>
+	</table>
+
+</body>
+
+</html>

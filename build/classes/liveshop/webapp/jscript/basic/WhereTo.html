@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>	
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<!--아래는 스크립트 선언코드입니다. 반드시 넣어야합니다.-->
+<script src="../js/dayTen.js"></script>
+<script>
+	//라인주석...같은 라인은 모든 애들은 개무시 당함..
+	/*얘는
+	블락 주석입니다.
+	모두 무시됩니다.*/
+	//키워드(key word) : 프로그램내에서 특정 목적으로 사용되기로 이미 약속된 단어들을 통칭함
+	//이 키워드는 변수나 함수명등으로 사용되면 안됨...꼭 기억하세요...
+
+	function myFunction(){
+		document.getElementById('demo').innerHTML="이건 변경된 구문 내용!!";
+		
+	}
+	
+</script>
+</head>
+<body onload="myfunc3('노세요');">
+<!--이 페이지에서는 자바스크립트를 어디에 정의(define) 할 수 있는지를 확인하고, 정의 방법 및 호출(call) 법을 간단히 봅니다.-->
+<!--자바스크립트는 코드는 html 문서 어디에나 정의 가능합니다. head, body 상관없습니다.
+	.js 소스코드를 가져다 쓸때는 스크립트 선언코드 내에서 src 속성의 값에 소스코드의 경로 및 이름을 넣어줍니다.
+	주의!!!!!!!! 반드시 외부스크립트 코드를 가져오는 선언코드는 <srcipt src="path"></script> 처럼
+	선언코드 중간에 공백이 없어야 합니다.
+	head 에 정의해서 사용하는 방법을 먼저 볼께요..
+	용어정리 : 프로그래밍에서는 실행 명령문을 목적에 맞게 코딩하는걸 통틀어 정의(define) 한다 라고 합니다. 꼭 기억하세요.
+	이렇게 정의된 코드(객체(속성,메서드)or 함수 (fuction)) 를 호출(call or invoked) 해서 실행하는게 프로그래밍의 기초 원리임-->
+<h2>Head 에 정의된 자바스크립트 예시</h2>
+
+<p id="demo">이건 구문입니다.</p>
+<button onclick="myFunction2();">클릭해보세요</button>
+<script>
+	function myFunction2(){
+		document.getElementById('demo').innerHTML="바디내의 스크립트 코드 실행 내용입니다";
+		
+	}
+</script>
+
+
+
+</body>
+</html>

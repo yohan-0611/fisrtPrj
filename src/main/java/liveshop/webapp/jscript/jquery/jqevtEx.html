@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="../../JQ/jquery-3.js"></script>
+<title>Insert title here</title>
+<script>
+	/*
+	jquery 에 사용되는 이벤트는 스크립트의 그것과 동일 합니다.
+	노드를 찾아서 target 객체가 리턴되면, 이벤트 명과 핸들러를 정의하면 됩니다.
+	하지만 이렇게 할 경우 단점이 있는데, 바로 target 에 이벤트를 중복으로 지정하기 어렵다는 것입니다.
+	이를 위해 on 이라는 메서드를 제공합니다. 이 사용법은 코드로 보여드릴게요.
+	
+	on() 문법 : 하나의 노드에 하나이상의 이벤트 및 핸들러를 적용할때 사용함.
+	
+	$('target').on({블락 반드시 존재해야합니다.
+		이벤트 명 : 핸들러 함수,
+		이벤트 명 : 핸들러 함수,
+		필요시 계속.. 마지막 함수에는 "," 없어야함
+		})
+	*/
+	$(document).ready(function () {
+			$('input').focus(function(){
+				$(this).css('background-color','gray')
+			});
+			
+		});
+		
+		$(document).ready(function () {
+			$('p').on({
+				mouseenter : function(){
+					$(this).css('background-color','gray');
+					},
+				mouseleave : function(){
+					$(this).css('background-color','red');
+					},
+				click: function(){
+					$(this).css('background-color','blue');
+					}
+			})
+			})
+						
+		$(document).ready(function () {
+			$('input').blur(function(){
+				$(this).css('background-color','red')
+			});
+			
+		});
+</script>
+</head>
+<body>
+이름 : <input name="name">
+주소 : <input name="addr">
+<p>회원가입</p>
+</body>
+</html>

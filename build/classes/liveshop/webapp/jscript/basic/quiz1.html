@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script>
+	var a = 10;// 전역변수 지역 다 사용 가능, 근데 쓰지마셈
+	{
+		var a= 20;
+		console.log(a);//20	
+	}
+	console.log(a);//20
+	
+	let x = 10;//동일 블락안에서 재선언금지, 블락내에서 선언된 변수는 지역으로 만 존재함. 즉 블락 외보에서는 호출 불가능
+	{
+		let x = 20;
+		console.log(x);//20
+	}
+	console.log(x);//10
+	
+	const PI = 3.14; //변하지 않는 값이다 선언과 동시에 초기화 되야한다. 블락 내에서만 재선언금지,재대입 금지, 단 속성의 값변경은 가능
+	console.log(PI);//3.14
+	
+
+	
+	
+	let name = 'yohan';
+	let age = 22;
+	{
+		after10 = 10; 
+		console.log("십년후" + name + "의 나이는" + (age+after10) + "살 입니다");
+		document.write("십년후" + name + "의 나이는" + (age+after10) + "살 입니다")
+	}
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script>
+	let idpw = '';
+	
+	function showMember(){	
+		idpw = getMemInfo();
+		asd();
+	}	
+	
+	function getMemInfo(){
+		const ID = document.getElementById('id').value + document.getElementById('pw').value;
+		return ID;
+	}
+	
+	
+	function asd(){
+		alert(idpw);
+	}
+	
+</script>
+</head>
+<body>
+<h2>당신의 id와 비번 입력해</h2>
+ID : <input type="text" id="id"> PW : <input type="password" id="pw">
+
+<button onclick="showMember();">눌러주세요</button>
+</body>
+</html>

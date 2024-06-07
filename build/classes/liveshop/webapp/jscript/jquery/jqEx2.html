@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="../../JQ/jquery-3.js"></script>
+	<title>Insert title here</title>
+	<style>
+		.test {
+			color: white;
+			background-color: gray;
+		}
+	</style>
+	<script>
+		$(document).ready(function () {
+
+			$('button').click(function () {
+				$(':button').hide();
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<p>헬로우 JQUERY... 날 클릭하면 난 사라짐1.</p>
+	<p>헬로우 JQUERY... 날 클릭하면 난 사라짐2.</p>
+	<p>헬로우 JQUERY... 날 클릭하면 난 사라짐3.</p>
+	<p class="test">
+		<a href="http://www.naver.com" name="a1">네이버</a>
+	</p>
+
+	<p class="test">
+		<a href="http://www.daum.net" name="a2">다음</a>
+	</p>
+
+	<p class="test">
+		<a name="a3">none href</a>
+	</p>
+
+
+	<button>클릭하세요</button>
+
+</body>
+
+</html>

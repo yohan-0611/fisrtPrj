@@ -1,0 +1,40 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Insert title here</title>
+	</head>
+	<body>
+	<p id ="demo"></p>
+	
+	<script>
+		
+		/*function a(){
+			b();	
+			console.log("이건 c() 가 끝난후 a()의 내용....메인 쓰레드 호출 stack 종료됨")
+		}
+		function b(){
+			c();
+			console.log("이건 c()가 끝난후 b()의 내용..")
+		}
+		function c(){
+			setTimeout(()=>{
+				for(let i = 0; i<10; i++){
+					console.log("이건 setTimeout 의 콜백 함수가 실행되어 나온 데이터...",i)
+				}
+				alert("setTimeout 쓰래드의 콜스택 종료됨.");
+			},10*1000);
+			console.log("이건 c()의 내용")
+			
+		}
+		 a();*/
+		 const intId = setInterval(()=>{
+			let d = new Date();
+			document.getElementById('demo').innerHTML = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();	 
+			setTimeout(()=>{clearInterval(intId);},10*1000);
+		 },1000);
+	
+	</script>
+	</body>
+	</html>

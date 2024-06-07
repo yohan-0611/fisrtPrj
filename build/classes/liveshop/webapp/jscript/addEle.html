@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<title>Insert title here</title>
+<script>
+	/*
+	선택된 기존 노드에 요소를 추가하거나, 컨텐트를 추가하는 메서드를 알아봅니다.
+	여기서 잘 생각해봐야 할것은 DOM 에서는 요소노드를 생성할지 텍스트 or 속성 노드를 생성할지를 결정했어야 했는데,
+	이 메서드들은 어떤 노드가 선택 되었는지에 따라 동적으로 값 or element(값 포함) 를 생성합니다.
+	
+	append() : 뒤에 붙음
+	prepend() : 첫 노드 생성함..
+	after() : 뒤에
+	before() : 이전
+	
+	삭제시 대표적 메서드
+	remove() : 선택된 요소를 삭제함(단 !!!!!!!!!!!!!! 하위의 모든 child 같이 삭제됨)
+	empty() : 선택된 자식 노드들을 삭제하는 메서드입니다.
+	
+	jquery css 관련 메서드는 꼭 한번 찾아서 알아보세요.
+	*/
+	$(document).ready(function(){
+		$('#b1').click(function(){
+			$('p').prepend("<b> 이건 추가된 내용입니다</b>");
+		})
+		$('#b2').click(function(){
+			$('ol').before("<li> 이건 추가된 내용입니다</li>");
+		})
+		
+		$('#b3').click(function(){
+			$('p').remove('.c1,.c2');
+		})
+	})
+</script>
+</head>
+<body>
+<p>이건 1번 구문 내용임...</p>
+<p>이건 2번 구문 내용임...</p>
+
+<ol>
+	<li>커피</li>
+	<li>뜨아</li>
+	<li>카마또</li>
+</ol>
+
+<div id="div1" style="height: 100px; width: 100px; border: 1px solid black; background-color: greenyellow;">
+	여기 내용은 div 내부의 자식 노드들 입니다.
+	<p class="c1">div 내부의 자식 p1</p>
+	<p class="c2">div 내부의 자식 p2</p>
+</div>
+
+<button id="b1">Text 추가</button>
+<button id="b2">리스트(요소) 추가</button>
+<button id="b3">remove</button>
+</body>
+</html>

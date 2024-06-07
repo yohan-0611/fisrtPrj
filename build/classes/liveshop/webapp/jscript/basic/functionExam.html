@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>함수(function)</title>
+</head>
+<body>
+	<script>
+		let f_Age = ageAfterTen(23);
+		parmF('yohan',f_Age);//호출
+		
+		//십년후의 나이값을 알고싶다..
+	
+		
+		
+		function ageAfterTen(curr_Age){
+			let result = curr_Age + 10;		
+			return result;
+		}
+		
+		
+		function myfunction(){
+			alert("함수가 호출되었습니다");
+		}
+		function parmF(x,age){
+			//위의 x는 함수 파라미터라 합니다. 이 함수를 호출하는 애가 전달하는 값을 x 로 받아서 내부에서 사용하겠다는 의미입니다.
+			//x는 paramF 에서 지역변수로 선언한 것과 같습니다.	
+			alert(x + "님의 십년후 나이" + age);
+		}
+		/*
+		함수(function) : 모든 프로그램에서 사용되는 개념입니다. 프로그래머는 곧 함수와의 싸움이라고 보면 됩니다.
+		
+		함수란, 특정 기능을 수행 하도록 정의된 내용을 함수 바디(block) 에 두고, 이 기능이 필요시에 안제든 불러서 호출(call or invoke)
+		해서 사용하도록 하는 기능을 통칭 합니다.
+		
+		함수의 장점은 한번 생성하면, 반복해서 재사용이 가능합니다.
+		또한 코드를 분리해서 코드의 간결성을 유지 할 수 있습니다.
+		
+		함수는 스크립트 코드내에서 function 으로만 존재 할때는 (일반)함수로 통칭하고, 이게 만약 객처 내부에 존재하면 매서드라고 칭합니다.
+		
+		꼭 기억!!!
+		
+		위말은 곧 호출할때 구분이 되어지는데, 일반함수는 함수명[파라미터n...] 을 기준으로 호출하지만,
+		매서드는 반드시 매서드를 가지고 있는 객체를 통해서만 호출할 수 있습니다.ex>obj>.methodA(parameters,n....)
+		
+		함수명짓는법 : function(키워드) 공백 함수명(소문자로시작함..변수이름규칙과 동일)(parameter name1, name2.....){
+			함수 body...
+			로직(변수선언 or 초기화 or 파라미터 사용 or 루프 or 조건문 등... 우리가 배운 모든 내용이 함수내에 로직으로 정의됨)	
+				
+}
+
+function test(){body define
+
+	return; 이 키워드는 반드시 기억하고 있으세요. 모든 프로그램밍에서 동일한 효과를 가지고 있으니 꼭 지금 알아여 합니다.
+}
+		*/
+</script>
+
+</body>
+</html>

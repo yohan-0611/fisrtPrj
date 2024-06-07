@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<!--addEventListener 를 이용해서 이벤트를 동적으로 지정했다면, removeRventListener 를 이용해서 제거 할수도 있습니다.
+문법은 addE 와 같습니다. target.removeE...(이벤트명,콜백명);
+
+주의 !! 익명 함수 or 람다를 핸들러로 사용할 경우엔, 콜백에 이름을 넣울 수 없으므로, 반함수체를 넣거나,
+첨부터 일반함수를 이용하는 방법을 사용해야 합니다.
+-->
+<style>
+	#m{
+		background-color: coral;
+		border: 1px solid;
+		padding: 50px;
+		color: white;
+		font-size: 20px;	
+	}
+</style>
+
+
+</head>
+<body>
+<div id="m">
+	<p>이 영역에 마우스가 움직이면 랜덤값을 아래 p 요소에 출력합니다.
+		이벤트를 종료하고 싶으면 아래 버튼을 클릭하세요.
+	</p>
+	<button onclick="removeHandler();" id="remBtn">이벤트 종료</button>
+	
+	<p id="demo"></p>
+	
+	<script>
+		//div에 이벤트 연결
+		document.getElementById('m').addEventListener('mousemove',myF);
+		
+		function myF(){
+			document.getElementById('demo').innerHTML = Math.random();
+		}
+		
+		function removeHandler(){
+			//target 에 removeEven....('이벤트명',핸들러함수)
+			document.getElementById('m').removeEventListener('mousemove',myF);
+			
+		}
+	</script>
+	</div>
+</body>
+</html>

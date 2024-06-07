@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>불만 표현 게시판</title>
+</head>
+
+
+<style>
+	
+	
+	body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+p {
+    color: #555;
+}
+
+.post-form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+	</style>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>불만 표현 게시판</title>
+</head>
+<body>
+    <div class="container">
+        <h1>불만 표현 게시판</h1>
+        <p>이곳에서는 익명으로 어떤 방송이 마음에 들지 않았는지 자유롭게 표현해보세요.</p>
+        <div class="post-form">
+            <label for="episode">방송 회차 입력:</label>
+            <input type="text" id="episode" name="episode" placeholder="방송 회차를 입력하세요">
+            <label for="post">불만 표현:</label>
+            <textarea id="post" name="post" rows="4" cols="50"></textarea>
+            <button onclick="showConfirmation()">글 작성</button>
+        </div>
+    </div>
+
+    <script>
+        function showConfirmation() {
+            alert('글 작성이 완료되었습니다!');
+            window.location.href = 'nn.html';
+        }
+    </script>
+</body>
+</html>
+
+

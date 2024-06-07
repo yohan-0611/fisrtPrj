@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./product.css">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="container">
+		<h1>속성 노드 이용해서 이미지 변경해보기(setter()이용)</h1>
+		<div id="prod-pic">
+			<img src="../../images/660026.png" alt="첫번째 이미지" id="theImgs" width="200px" height="200px">
+			<div id="small-pic">
+				<img src="../../images/logo1.png" class="small">
+				<img src="../../images/메인3.jpg" class="small">
+				<img src="../../images/메인4.jpg" class="small">
+				<img src="../../images/메인5.jpg" class="small">
+			</div>
+		</div>
+		<div id="dsec">
+			이건 그냥 내용임;
+		</div>
+		
+	</div>
+	
+	<script>
+		const smallPics = document.querySelector('#small-pic').childNodes;
+		const orginPic = document.querySelector('#theImgs')
+		
+		for(let i = 0; i<smallPics.length; i++){
+			smallPics[i].addEventListener('click',chgPic);
+		}
+		
+		
+		
+		function chgPic(){
+			let nw = this.src;
+			orginPic.setAttribute("src",nw)
+			
+		}
+		
+		
+	</script>
+
+</body>
+</html>

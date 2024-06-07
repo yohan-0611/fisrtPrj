@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>화제의 영상</title>
+	<meta name="author" content="상원">
+
+
+	<link rel="stylesheet" href="./bootstrap.min.css">
+	<link rel="stylesheet" href="./bootstrap.min.js">
+	
+	<link rel="stylesheet" href="./project.css">
+
+	<link rel="canonical" href="https://getbootstrap.kr/docs/5.3/examples/footers/">
+
+
+	<style>
+		h1 {
+			font-family: 'Black Han Sans', sans-serif;
+			font-weight: 900px;
+		}
+
+		* {
+			margin: 0;
+			/* 마진 리셋 */
+			padding: 0;
+			/* 패딩 리셋 */
+			box-sizing: border-box;
+			/* 박스 영역은 테두리까지 */
+		}
+
+		a {
+			color: black;
+			text-decoration: none;
+			/* 텍스트 링크 밑줄 없애기 */
+		}
+		
+		p{
+			font-size: 15px;
+		}
+
+		.contents {
+			width: 1200px;
+			margin: auto;
+		}
+
+		main>section {
+			float: left;
+			margin-top: 30px;
+		}
+
+		main h2 {
+			font-size: 1.5em;
+			line-height: 2.5;
+		}
+
+		main div {
+			margin-top: 20px;
+		}
+
+		main h3 {
+			font-size: 1.2em;
+			line-height: 2.2;
+		}
+
+		.detail p {
+			line-height: 2.0;
+		
+		}
+
+		.detail>img {
+			margin-right: 40px;
+			border-radius: 20px;
+		}
+
+		.detailed p {
+			line-height: 2.0;
+			color: #222;
+		}
+
+		.detailed>img {
+			float: inline-end;
+			margin-right: 50px;
+			border-radius: 20px;
+		}
+
+		body {
+			display: flex;
+			flex-direction: column;
+			min-height: 100vh;
+			/* Ensure the body takes at least the full viewport height */
+		}
+
+		footer {
+			text-align: center;
+			padding: 50px;
+			color: black;
+			margin-top: auto;
+			/* Push the footer to the bottom of the container */
+			font-size: 18px;
+		}
+
+		.pagination {
+			display: flex;
+			justify-content: center;
+			margin: 0;
+			padding: 0;
+		}
+
+		.pagination li {
+			font-size: 15px;
+			margin: 0 5px;
+		}
+	</style>
+
+</head>
+
+<body>
+<!--네비게이션 시작-->
+	<header style="height: 200px;" class="header">
+		<h1 class="header_logo" style="margin-top: 40px;">무한도전</h1>
+	</header>
+
+	<nav>
+		<a href="./home.html" style="margin-left: 200px;"><b>HOME</b></a>
+		<a href="./about.html" target="_blank"><b>프로그램 소개</b></a>
+		<a href="./pan.html" target="_blank"><b>시청자 게시판</b></a>
+		<a href="./jjal.html" target="_blank"><b>짤</b></a>
+		<a href="./legend.html" target="_blank"><b>화제의 영상</b></a>
+		<a href="./login.html" style="float: right;" target="_blank"><b>LOGIN</b></a>
+		<a href="./singup.html" style="float: right;" target="_blank"><b>회원가입</b></a>
+	</nav>
+	<!--네비게이션 끝-->
+
+	<!--본문 내용 시작-->
+	<a href="#" style="margin-left: 400px">
+		<h1>레전드 에피소드</h1>
+	</a>
+
+			<p style="margin-left: 400px; " >무한도전의 다양한 에피소드들 중 시청자들을 웃기고, 때로는 감동받게한 과거 명장면들만 모아놓은 콘텐츠</p>
+	
+	<main class="contents">
+		<section style="float: left; margin-left: 50px;">
+			<div class="car">
+				<div class="card-bod" style="width: 23rem; margin-right: 20px;" >
+					<h2><b>내 동기가 박명수라면...</b></h2>
+					<a href="https://www.youtube.com/watch?v=pF_rqav38Z4&pp=ygUN66y064-EIOq1sOuMgA%3D%3D"
+						target="_blank">
+
+						<img src="1.jpg" class="card-img-top" style="border-radius: 10px; border:1px solid;">
+					</a>
+					<h3>박명수 분대장과 함께하는 군생활</h3>
+					<p class="card-text"><b><small>믿음직스럽지는 않지만 웃음직스러운...이젠 전설이<br>
+								된 우리들의 전우</small></b></p>
+				</div>
+			</div>
+		</section>
+
+		<section style="float: left;">
+			<div class="car">
+				<div class="card-bod" style="width: 23rem; margin-right: 20px;">
+					<h2><b>무한상사의 하루</b></h2>
+					<a href="https://www.youtube.com/watch?v=eHSAdUSoD58&pp=ygUM66y07ZWc7IOB7IKs" target="_blank">
+
+						<img src="./2.jpg" class="card-img-top"
+							style="border-radius: 10px; border:1px solid black;">
+					</a>
+					<h3>유부장과 함께하는 회사생활</h3>
+					<p class="card-text"><b><small>다사다난하지만 정작 자신들의 업무는 파악하지<br>못 하는 무한상사 직원들...</small></b></p>
+				</div>
+			</div>
+		</section>
+
+		<section style="float: left;">
+			<div class="car">
+				<div class="card-bod" style="width: 23rem;">
+					<h2><b>해님 달님</b></h2>
+					<a href="https://www.youtube.com/watch?v=1KaCz6jmnoc&pp=ygUZ66y07ZWc64-E7KCEIO2VtOuLmOuLrOuLmA%3D%3D"
+						target="_blank">
+
+						<img src="./3.jpg" class="card-img-top"
+							style="border-radius: 10px; border:1px solid black;">
+					</a>
+					<h3>추석 기념 술레잡기</h3>
+					<p class="card-text"><b><small>유재석과 정형돈 남매가 착한 호랑이를 <br>찾아떠나는 모험</small></b></p>
+				</div>
+			</div>
+		</section>
+
+		<section style="float: left; margin-left: 50px;">
+			<div class="car" style="width: 23rem; margin-right: 20px;">
+				<div class="card-bod">
+					<h2><b>별주부전</b></h2>
+					<a href="https://www.youtube.com/watch?v=Qa-Eda3EnuA&pp=ygUZ66y07ZWc64-E7KCEIOuzhOyjvOu2gOyghA%3D%3D"
+						target="_blank">
+
+						<img src="./4.jpg" class="card-img-top"
+							style="border-radius: 10px; border:1px solid black;">
+					</a>
+					<h3>토끼와 거북이들의 경주</h3>
+					<p class="card-text"><b><small>토끼와 거북이의 치열한 심리전과 추격전<br>
+							</small></b></p>
+				</div>
+			</div>
+		</section>
+
+		<section style="float: left;">
+			<div class="car" style="width: 23rem; margin-right: 20px;">
+				<div class="card-bod">
+					<h2><b>꼬리잡기</b></h2>
+					<a href="https://www.youtube.com/watch?v=L9JyUD2MRIY&pp=ygUW66y07ZWc64-E7KCEIOugiOyghOuTnA%3D%3D"
+						target="_blank">
+
+						<img src="./5.jpg" class="card-img-top"
+							style="border-radius: 10px; border:1px solid black;">
+					</a>
+					<h3>무한도전 레전드 추격전 1위!</h3>
+					<p class="card-text"><b><small>멤버들의 활약과 노홍철의 사기 AGAIN으로<br>매 순간 모든 장면이 명장면</small></b></p>
+				</div>
+			</div>
+		</section>
+
+		<section style="float: left;">
+			<div class="car" style="width: 23rem;">
+				<div class="card-bod">
+					<h2><b>무인도 특집</b></h2>
+					<a href="https://www.youtube.com/watch?v=9EsKLveY3Rc&pp=ygUW66y07ZWc64-E7KCEIOustOyduOuPhA%3D%3D"
+						target="_blank">
+						<img src="./6.jpg" class="card-img-top"
+							style="border-radius: 10px; border:1px solid black;">
+					</a>
+					<h3>무인도에서 꽃피는 무한 이기주의</h3>
+					<p class="card-text"><b><small>협동보다는 개인 플레이가 편한 멤버들의 무인도<br>생존기</small></b></p>
+				</div>
+			</div>
+		</section>
+
+		<section style="float: left; margin-left: 50px;">
+			<div class="car" style="width: 23rem; margin-right: 20px;">
+				<div class="card-bod">
+					<h2><b>무인도 특집 2</b></h2>
+					<a href="https://www.youtube.com/watch?v=EXN45HLMhaI&pp=ygUW66y07ZWc64-E7KCEIOugiOyghOuTnA%3D%3D"
+						target="_blank">
+
+						<img src="./7.jpg" class="card-img-top"
+							style="border-radius: 10px; border:1px solid black;">
+					</a>
+					<h3>다시보고 싶은 특집 1위!</h3>
+					<p class="card-text"><b><small>다시 한 번 무인도에 떨어진 멤버들과<br>
+								함께 다시 피어난 무한 이기주의</small></b></p>
+				</div>
+			</div>
+		</section>
+
+		<section style="float: left;">
+			<div class="car" style="width: 23rem; margin-right: 20px;">
+				<div class="card-bod">
+					<h2><b>소문난 7공주</b></h2>
+					<a href="https://www.youtube.com/watch?v=9ymwJvEG8aI&pp=ygUU66y07ZWc64-E7KCEIDfqs7Xso7w%3D"
+						target="_blank">
+
+						<img src="./8.jpg" class="card-img-top"
+							style="border-radius: 10px; border:1px solid black;">
+					</a>
+					<h3>무한동화 속 일곱 공주들</h3>
+					<p class="card-text"><b><small>화려한 공주들의 미모 비결에서부터 미각 테스트,<br>공주들의 테이블 매너까지 들여다보는...</small></b></p>
+				</div>
+			</div>
+		</section>
+
+		<section style="float: left;">
+			<div class="car" style="width: 23rem;">
+				<div class="card-bod">
+					<h2><b>명수는 12살</b></h2>
+					<a href="https://www.youtube.com/watch?v=EXN45HLMhaI&pp=ygUW66y07ZWc64-E7KCEIOugiOyghOuTnA%3D%3D"
+						target="_blank">
+						<img src="./9.jpg" class="card-img-top"
+							style="border-radius: 10px; border:1px solid black;">
+					</a>
+					<h3>무한도전 레전드 캐릭터쇼 1위!</h3>
+					<p class="card-text"><b><small>유년시절로 돌아간 무도 멤버들의<br>레전드 캐릭터쇼</small></b></p>
+				</div>
+			</div>
+		</section>
+	</main>
+	<!--본문 내용 끝-->
+
+	<!--푸터 시작-->
+	<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+		<symbol id="bootstrap" viewBox="0 0 118 94">
+			<title>무한도전</title>
+			<path fill-rule="evenodd" clip-rule="evenodd"
+				d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z">
+			</path>
+		</symbol>
+		<symbol id="facebook" viewBox="0 0 16 16">
+			<path
+				d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+		</symbol>
+		<symbol id="instagram" viewBox="0 0 16 16">
+			<path
+				d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+		</symbol>
+		<symbol id="twitter" viewBox="0 0 16 16">
+			<path
+				d="	M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+		</symbol>
+	</svg>
+
+	<div class="container">
+		<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+			<div class="col-md-4 d-flex align-items-center">
+				<a href="./Home.html" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+					<img src="./image-removebg-preview.png" width="55px" height="50px" style="margin-bottom: 5px;">
+				</a>
+				<span class="mb-3 mb-md-0 text-body-secondary">무한도전</span>
+			</div>
+
+			<ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+				<li class="ms-3"><a class="text-body-secondary" href="https://twitter.com"><svg class="bi" width="24"
+							height="24">
+							<use xlink:href="#twitter" />
+						</svg></a></li>
+				<li class="ms-3"><a class="text-body-secondary" href="https://www.instagram.com"><svg class="bi"
+							width="24" height="24">
+							<use xlink:href="#instagram" />
+						</svg></a></li>
+				<li class="ms-3"><a class="text-body-secondary" href="https://www.facebook.com"><svg class="bi"
+							width="24" height="24">
+							<use xlink:href="#facebook" />
+						</svg></a></li>
+			</ul>
+		</footer>
+	</div>
+	<!--푸터 끝-->
+</body>
+
+</html>

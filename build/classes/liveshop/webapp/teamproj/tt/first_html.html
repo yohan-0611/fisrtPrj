@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="나경">
+    <title>게시판</title>
+    <style>
+		
+		
+		body {
+  height: 1500px;
+  background: url(https://www.brainpickings.org/wp-content/themes/brainpickings/images/bckgd_body.png);
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: 200px;
+  font-weight: bold;
+  text-align: center;
+  background: rgb(231,232,218);
+  transition: .3s;
+  top: 0;
+ 
+}
+
+.header_logo {
+  font-family: 'Oswald', sans-serif;
+  padding-top: 35px;
+  font-size: 50px;
+  text-align: center;
+  text-shadow: 3px 4px rgba(black, .1);
+  transition: .3s;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+}
+
+
+table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            text-align: center;
+            font-family: 'Black Han Sans', sans-serif;
+        }
+
+         td {
+            border: 1px solid rgb(216,203,168);
+            text-align: center;
+            padding: 100px;
+        }
+
+        th {
+			 border: 1px solid rgb(246,233,168);
+            background-color: rgb(216, 203,168);
+            padding: 50px;
+        }
+
+		 #top{
+			padding : 10px;
+		}
+		
+
+	/* 여기부터는 사이트 메인 부분*/	
+      @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+      h1 {
+         font-family: 'Black Han Sans', sans-serif;
+         font-weight: 900px;
+         text-align: left;
+      }
+		
+		
+        body {
+            font-family: 'Black Han Sans', sans-serif;
+            margin: 20px;
+        }
+       
+
+        
+
+        .write-button {
+            background-color:rgb(216,203,168);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            float: right;
+        }
+        
+       
+       .size{
+		   padding: 5px;
+	   }
+       
+       p{
+		   margin: 0px;
+		   font-size : 20px;
+	   }
+       
+    </style>
+    <script>
+		
+				//header 고정 스크롤
+	$(document).scroll(function() {
+  navbarScroll();
+});
+
+function navbarScroll() {
+  var y = window.scrollY;
+  if (y > 10) {
+    $('.header').addClass('small');
+  } else if (y < 10) {
+    $('.header').removeClass('small');
+  }
+}
+	
+		
+		
+		function url(){
+			window.location.href = "./pan.html"
+		}
+		
+		
+		
+
+	
+
+	</script>
+</head>
+<body>
+
+
+
+
+
+<header>
+	<div class="header">
+		<h1 class="header_logo">무한도전</h1>
+	<nav> <!--네비 헤더안에 있어야 함-->
+		<ul>
+			<a href="#">홈</a>
+			<a href="#">프로그램 소개</a>
+			<a href="#">시청자 게시판</a>
+			<a href="#">짤</a>
+			<a href="#">화제의 1분</a>
+			<a href="#">로그인</a>
+		</ul>
+	</nav>	
+		
+	</div>
+	
+	
+</header>
+
+
+
+<br><br><br>
+<br><br><br>
+<br><br><br>
+
+
+
+
+
+<h1>무한도전 게시판</h1>
+
+<table>
+	<tr>
+        <th class="size">번호</th>
+        <th>제목</th>
+        <th>작성자</th>
+        <th>작성일</th>
+        <th>조회수</th>
+        
+    </tr>
+    
+    <tr>
+        <td id="top" class="size">번호</td>
+        <td id="top">사진이 안보여요</td>
+        <td id="top">yohan</td>
+        <td id="top">2023.12.5</td>
+        <td id="top">55</td>
+        
+        
+        
+    <tr>
+    <td rowspan="2" class="size">글의 내용</td>
+    <td colspan="4">
+		<p>
+정말 엄청나게 감사드립니다
+꿈만같던2주였어요
+아내고 애들이고 뒷전이고
+나를 찾아가는 시간이었어요
+정말로 감사드립니다
+
+방송시간때문에 편집할수밖에없는거알아요
+그치만 노래를 따라부르다가 끊겨서ㅠ
+너무아쉬웠어요ㅠㅠ
+풀버젼 무료가아닌 유로로라도
+풀어주시면안될까요?
+유투브말구요ㅠㅠ
+저희는 DVD소장 굉장히 좋아합니다ㅠㅠ
+
+밤새 영상보고
+좋아서미칠것만같은 club h.o.t. 였습니다
+
+아,
+형들
+이글을보진않겠지만
+건너건너 귀에들어갔으면 좋겠어요
+단독콘서트 꼭 해주세요
+가고싶어하는사람 갈사람이 굉장히 많아요
+저의 평생 한을 풀어주세요
+사랑해요</p></td>
+</tr>
+
+
+       
+       
+     
+   
+</table>
+
+
+<div class="button-container">
+    <button class="write-button" onclick="url();">목록으로 돌아가기</button>
+</div>
+
+
+
+</body>
+</html>

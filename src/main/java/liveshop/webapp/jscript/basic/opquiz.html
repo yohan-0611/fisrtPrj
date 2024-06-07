@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		//변수 3개를 꼭 이용하시고, 이 문서가 로드 되면, promt 띄어지면서, 점수를 입력하세요, 정수만
+		//입력된 점수를 1번 변수에 담고, 다음에 다시 prompt 가 띄워지면서, 점수를 입력하세요, 정수만
+		//라고 나오게 한 후 2번쨰 점수를 변수에 담고, 총합을 3번 변수에 담아서 다음처럼 문서에 출력시키세요.
+		//당신의 총점 : ? 점 입니다
+		let score1 = prompt("점수를 입력하세요", "정수만");
+			score1 = parseInt(score1);
+		let score2 = prompt("점수를 입력하세요", "정수만");
+			score2 = parseInt(score2);
+		let total = score1 + score2;
+		document.write("당신의 총점 :" + total);	
+	</script>
+</body>
+</html>

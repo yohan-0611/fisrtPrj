@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+</head>
+<body>
+<p id ="demo"></p>
+
+<script>
+	
+	function myDis(some){
+		document.getElementById('demo').innerHTML =  some;
+	}
+	/*function myFir(){
+		myDis("Hello");
+		setTimeout(myFir,5000);	
+	}
+	function mySec(){
+		myDis("굳바이");
+		
+	}
+	myFir();
+	mySec();*/
+	
+	
+	//파람데이터를 연산하고, 콜백을 이용해서 출력 하는 함수입니다.
+	//마지막 파람은 콜백 함수를 받도록 할게요.
+	function myCal(num1, num2, myCallback){
+		let sum = num1 + num2;
+		myCallback(sum);
+		
+	}
+	
+	myCal(10,10,myDis);//중요!!! 콜백 함수를 파람으로 넘길때는 반드시 함수명만 주세요!!!!
+</script>
+</body>
+</html>

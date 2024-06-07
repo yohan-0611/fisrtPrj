@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<title>Insert title here</title>
+<script>
+	/*
+	CSS 에서는 요소의 display or visible 속성을 이용 보였다(show()),안보였다(hide())만들거나
+	toggle(toggle()) 되게하거나, animation 효과를 주거나, slide 효과를 줄수있습니다.
+	이 모든 효과(EFFECT) 를 간단하게 메서드롤 표현 할수 있습니다. 이를 알아보게요.
+	기억할것!! 모든 effect 메서드에는 effect 가 완료된후 처리될 콜백을 optional 하게 받을 수 있습니다.
+	따라서 후속 작업을 지정할때는 필요에 따라서 콜백일 이용합니다
+	
+	hide(); show(); ==> 총 3가의 메서드가 오버로딩되어있슴...
+	파람없는앤 그냥 그 효과만, 첫번째 파람은 스피드 조절(millis), 두번째 파람은 콜백
+	*/
+</script>
+</head>
+<body>
+<p>jquery Effect 알아보기</p>
+
+<button id="id1">click</button>
+<button id="id2">show</button>
+<script>
+
+	$('#id1').click(function(){
+		$('p').toggle(1*1000);
+	});
+	$('#id2').click(function(){
+		$('p').show(1*1000);
+	});
+	</script>
+</body>
+</html>

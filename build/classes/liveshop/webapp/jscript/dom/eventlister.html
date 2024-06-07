@@ -1,0 +1,49 @@
+	<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+
+</head>
+<body>
+<p id="demo">이벤트리스너 사용 방법</p>
+<button id="bt">이건 버튼</button>
+
+
+<script>
+	//이벤트 대상.addEventListener(이벤트 타입, 헨들러)
+	//const button = document.getElementById('bt');
+	const button = document.querySelector('button')
+	
+	const myHandle = function(){
+		alert("버튼이 클릭됐군요")
+	}
+	
+	const myL = ()=>{
+		alert("이건 람다 핸들러");
+	}
+	button.addEventListener('click',()=>{alert("이건 일회용");});
+	
+	const pEle = document.querySelector('p');
+	
+	pEle.addEventListener('mouseover',()=>{
+		console.log("this 가 Ref 하는 애 :",this)
+	})
+	
+	pEle.addEventListener('click',(event)=>{
+		console.log('클릭했군요',event.target,event.type)
+	});
+	/*핸들러에서 익명함수구현식(ex function(){}) 핸들러를 적용시, this 는 이벤트 대상 자신을 가르킵니다.
+	하지만, 람다로 구현하게 되면 this 는 최상의 Global 객체인 window 를 ref 하게 됩니다.
+	따라서 핸들러 내부에 this 를 사용시엔 이부분을 고려 해야됩니다.*/
+	
+	
+	
+	
+	
+	
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<title>Insert title here</title>
+<style>
+	.ances *{
+		display: block;
+		border: 3px solid red;
+		color: grey;
+		padding: 5px;
+		margin: 15px;
+	}
+</style>
+<script>
+	$(document).ready(function(){
+		//$('span').parent().css({"color":"red", "border" : "2px solid red"})ul 까지만 올라가서 부모노드 리턴
+		//$('span').parentsUntil('div').css({"color":"red", "border" : "2px solid red"}) html 노드까지 올라가서 모든 부모노드 리턴
+	//자식노드 찾기 예제
+	//$('div').children('p.first').css({"color":"red", "border" : "2px solid red"})
+	$('div').find('p.first').css({"color":"red", "border" : "2px solid red"})
+	});
+	//일반 DOM 에서는 현재 노드를 기준으로 위는 parent, 아래는 child 로만 표기 가능했었음.
+	//그런데 jqueryDOM 에선, parent < grandparent < great-grandparent : Ancestor
+	//반대의 경우엔 child 앞에 위 키워드만 넣으면 됩니다.
+	//이웃은 sibling 으로 표현 합니다. 이런 구조로 트리플 순회해서 노드 찾기를 수행 합니다.
+	
+	//바로 상위의 부모 찾기 : parent();
+	//html 끝까지 가서  모든 조상들 찾기 parents();
+	//특정 범위의 부모 찾기 : parentsUntil();
+	
+	//위의 세가지 대표적인 부모 노드를 찾는 메서드 입니다.
+	//이 외에서 좀더 많은 메서드가 있지만, API 문서 참조 보세요.
+	
+	//자식 노드 찾기..
+	//childern() : 당연히 바로 아래의 노드 하나만 선택해서 리턴합니다.
+	//find() : 이름에서 알수 있듯이, 모든 하위의 요소까지 찾아 내려가서 노드들을 리턴합니다.
+	//parents() 의 반대형이라고 보면 됩니다, 단 , 키워드에 따라서 범위는 조금식 틀려집니다.
+	//키워드(찾으려는 노드) 가 없는 경우엔 하위 노드 하나만 리턴합니다.
+</script>
+</head>
+<body>
+	<div class='ances'>
+		<div style="width: 500px;">
+			DIV(증보무 DIV)
+			<ul>
+				여긴 UL (조부모 노드)
+				<li>여긴 li(부모노드)
+				<span>span</span>
+				</li>
+			</ul>
+		</div>
+		<div style="width: 500px;">(조부모 노드)
+			<p>p 노드(부모노드)
+			<span>span 노드</span>
+			</p>
+		</div>
+		
+		<h1> 자식 노드 찾아내기 예제.</h1>
+		<div class="cnces" style="width: 500px;">DIV : Jquery Dom 에서는 현재 선택된 노드
+			<p class="first">p1 (자식노드)
+				<span>Span1(DIV 관점 손자노드)</span>
+			</p>
+			<p class="second">p2 (자식노드)
+				<span>Span2(DIV 관점 손자노드)</span>
+			</p>
+		</div>
+		
+</body>
+</html>

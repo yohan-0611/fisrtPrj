@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Insert title here</title>
+</head>
+
+<body>
+	<p>자바스크립트는 이미지 요소도 맘대로 접근 및 제어가능해요</p>
+
+	<button onclick="document.getElementById('myimg').src='../images/pic_bulbon.gif'">
+		Turn on the light
+	</button>
+
+	<img src="../images/pic_bulboff.gif" style="width: 100px;" id="myimg">
+
+	<button onclick="document.getElementById('myimg').src='../images/pic_bulboff.gif'">
+		Turn on the light
+	</button>
+
+	<h2>Css 에서 horver 배울때 사용했던 기능도 스크립트는 간단히 구현 가능해요.</h2>
+	<p id="demo1">HTMl Elemnt 의 style 을 변경해 볼까요?</p>
+	<button onclick="document.getElementById('demo1').style.fontSize='50px'"
+	ondblclick="document.getElementById('demo1').style.display='none'"
+	>날 클릭해요!!</button>
+</body>
+
+</html>	

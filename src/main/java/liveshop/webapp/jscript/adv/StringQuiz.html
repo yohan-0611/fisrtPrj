@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+
+
+<script>
+	function checkId(){
+		let a = document.getElementById('check').value;
+		let b = a.includes('@');
+		let c = a.indexOf("@");
+		let d = a.length;
+		let server = a.substring(c, d); 
+		let ID = a.substring(0, c);
+		
+		
+		if(!b) {	
+			alert("@가 없습니다");
+		}
+		else if(ID.at(0) < 'A' || ID.at(0) > 'Z') {
+			alert("앞자리가 대문자가 아닙니다");s
+		}
+		else if(ID.length < 8 || ID.length > 16){
+			alert("8~15자 사이로 입력해주세요");
+		}
+		else if(!server.endsWith(".com") && !server.endsWith(".net")){
+			alert(".com 또는 .net 으로 끝나야합니다");
+		}
+		
+		else{	
+		for (let i = 0; i < ID.length; i++) {
+        var g = false;
+        if (ID.at(i) > '0' && ID.at(i) < '9') { 
+			var g = true;
+            break;     
+        }
+        
+		}
+		if(g == false){
+			alert("ID 에 숫자가 포함되어야합니다");
+		}
+    }
+    for(i=0; i<ID.length; i++){
+
+		console.log(ID[i]);
+	}
+		
+		alert("올바른 ID 입니다");
+	}
+</script>
+</head>
+<body>
+<h2>ID 검사 해보기</h2>
+id : <input placeholder="id 입력하세요" onblur="checkId();" id="check">
+</body>
+</html>

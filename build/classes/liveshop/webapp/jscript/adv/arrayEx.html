@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		/*
+		배열(Array) : 자료(Data) 집단을 일괄적으로 관리하기 위한 대표적 자료 구조입니다.
+		배열은 객체이기때문에 항상 머릿속에는 Reference 를 그려야 고생하지 않습니다.
+		
+		배열은 하나 이상의 값을 하나의 Ref 변수르 통해 관리하고자 만들어졌습니다.
+		대표적 표식자로는 []를 사용합니다.
+		
+		또한 배열역시 Array 라는 생성자 함수를 가지고 있기 떄문에, new 키워드를 통해서 생성할 수 있습니다.
+		*/
+		let arr = [1,2,3,4,5,6,7,8,9]
+		const a = 5;
+		let txt = "<ul>";
+		for(i = 0; i < arr.length; i++){
+    		txt+= "<li>" + a + "*" + arr[i]+"=" + arr[i] * a + "</li>"
+    
+}
+    txt+="</ul>";
+    document.write(txt);
+	</script>
+
+</body>
+</html>

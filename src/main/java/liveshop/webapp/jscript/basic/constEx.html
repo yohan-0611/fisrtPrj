@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script>
+	/*
+	const : let 과 함께 ECMA6 에서 발표된 변수 키워드입니다.
+	이 변수는 쉽습니다. 상수(항상 일정한 값을 유지하는 변수값)을 사용하기 위한 변수 입니다.
+	ex>pi 값은 항상 3.14 여야 합니다. 따라서 이 값은 절대 바뀌면 안되기에, 선언과 동시에 값을 초기화 하고
+	이후에는 절대 이값을 바꿀 수 없습니다. 시도하면 바로 에러임.
+	let 처럼 block scope 를 유지하기 떄문에 하위 블락에서는 재선언 가능함..하지만.. 가독성 때문이라도
+	다른 변수명을 사용하길 권장함.
+	*/
+	const cars = ["bmw","goldmatiz","redmatiz"];
+	cars[0] = '하와이';
+	console.log(cars);
+		 // cars = ["하와이","런던","스위스"];
+		 const me = {name:'고요한',gender:'M',addr:'인천시'};
+		 console.log(me.name);
+</script>
+</head>
+<body>
+	
+</body>
+</html>

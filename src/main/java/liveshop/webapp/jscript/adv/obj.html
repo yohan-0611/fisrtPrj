@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+
+	
+</head>
+<body>
+<p id="demo"></p>
+<button onclick="this.style.display='none'">click me</button>
+
+
+<script>
+	"use strict"
+	
+	document.getElementById('demo').innerHTML = myf();
+	/*
+	이름 : 고요한
+	나이 : 23
+	성별 : M
+	취미 : 게임
+	주소 : 인천
+	핸폰 : 4250
+	잘하는것 : 잠자기
+	못하는것 : 몸쓰기
+	제일 하고싶은것 : 집가기
+	*/
+	//객체 정의 및 reference
+	const me = {name:'요한',age:'23',gen:'M',hp:'01026704250',
+	fName:'고',
+	fullName: function(){
+		return this.fName + "" + this.name;
+	}
+	};	
+	
+	let meClone = {name:'고요한',age:'23',gen:'M',hp:'01026704250'};
+	
+	function myf(){
+		return this;
+	}
+	
+	meClone = me;
+</script>
+</body>
+</html>
+
+
+
+
+
+
+

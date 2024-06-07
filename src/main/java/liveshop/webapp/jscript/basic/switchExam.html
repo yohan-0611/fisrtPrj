@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Insert title here</title>
+</head>
+
+<body>
+	<script>
+		//switch-case~default 조건문
+		/*
+		위 조건문은 if 대신 간단한 조건을 사용할 수 있습니다.
+		구문은 switch(비교값){
+			case 값 :
+				위 값이 true 인 경우 수행문;;
+				break;
+			case n.....
+					
+				default : //if 구문에서는 else 와 같음.. 위 조건에서 하나도 안걸리면 수행되는 구문
+				수행문..
+		}
+		
+		*/
+		/*let a = 10;
+		let b = 20;
+
+		let op = '*';
+
+		let result;
+
+		switch (op) {
+			case '+':
+				result = a + b;
+				console.log(result);
+				break;
+			//break 라는 키워드가 없으면 나올떄까지 모두 실행을 하게 됩니다.
+			//따라서 switch 블락을 탈출 하려면 조건이 만족되었을때 반드시 break;
+			//키워드를 사용해야 합니다.
+			//매우중요!!!! break; 키워드는 조건문인 switch 에서만 사용가능합니다.
+			//절대 if 구문에서는 사용하면 안됩니다. 꼭 기억.
+			/*case '*':
+				result = a * b;
+				console.log(result);
+				break;
+			default:
+				result = "올바른 연산자가 아닙니다";
+				console.log(result);
+		}
+		let kor = 80; eng = 70; math = 50;
+
+		let total = kor + eng + math;
+
+		let avg = total / 3
+
+		let grade;
+
+		switch (Math.round(avg / 10)) {
+			case 10:
+			case 9:
+				grade = "A";
+				break;
+
+			case 8:
+				grade = "B";
+				break;
+
+			case 7:
+				grade = "C";
+				break;
+
+			default:
+				grade = "F";
+
+		}
+		console.log("당신의 학점", grade, "총점", total);*/
+
+
+
+		function a() {
+			let r = Math.round(Math.random(1) * 20);
+			let r1;
+
+			console.log(r);
+
+			switch (true) {
+				case r % 2 === 0:
+					r1 = "2의 배수입니다";
+					break;
+
+				case r % 3 === 0:
+					r1 = "3의 배수입니다";
+					break;
+
+				case r % 5 === 0:
+					r1 = "5의 배수입니다";	
+					break;
+
+				default:
+					r1 = "이도저도 아닌 수 입니다.";
+					break;
+			}
+
+			console.log(r1);
+
+		}
+
+
+
+	</script>
+</body>
+<button onclick="a();">랜덤으로 숫자생성</button>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Insert title here</title>
+</head>
+
+<body>
+	<p id="demo"></p>
+	<script>
+		//navigator 속성 : window 객체의 속성으로 Access 하면 Navigator 객체를 리턴한다.
+		//주된 기능은 접근한 클라이언트 Device 및 os, Brower 정보를 가져와서 제공하는 역활을 한다.
+		let docEle = document.getElementById('demo');
+
+		docEle.innerHTML = navigator.cookieEnabled
+
+		docEle.innerHTML = "브라우저 코드 :" + navigator.onLine;
+
+
+	</script>
+</body>
+
+</html>

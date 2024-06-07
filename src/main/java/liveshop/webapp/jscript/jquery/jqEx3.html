@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="../../JQ/jquery-3.js"></script>
+	<title>Insert title here</title>
+	<style>
+		.test {
+			color: white;
+			background-color: gray;
+		}
+	</style>
+	<script>
+		$(document).ready(function () {
+			$('tr:odd').css('background-color','gray');
+			
+		});
+	</script>
+</head>
+
+<body>
+<h1>JQUERY 를 이용한 Striped Tabel 만들기</h1>
+<table border = "1px"; style="border-collapse: collapse;">
+	<caption>
+		우리반 학생 정보
+	</caption>
+	<tr>
+		<th>
+			이름
+		</th>
+		<th>
+			성별
+		</th>
+	</tr>
+	<tr>
+		<td>
+			최희정
+		</td>
+		<td>
+			F
+		</td>
+	</tr>
+	<tr>
+		<td>
+			박낙주
+		</td>
+		<td>
+			M
+		</td>
+	</tr>
+	<tr>
+		<td>
+			길혜원
+		</td>
+		<td>
+			M
+		</td>
+	</tr>
+	
+</table>
+
+</body>
+
+</html>

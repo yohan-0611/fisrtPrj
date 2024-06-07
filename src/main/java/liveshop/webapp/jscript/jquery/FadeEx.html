@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<title>Insert title here</title>
+	<script>
+		/*
+		fadeIn([slow,fast,millis],callback,out(),fadeToggle(),fadeTo(speed,opacity,callback))
+		*/
+		$(document).ready(function(){
+			$('#id1').click(function(){
+				$('#div1').fadeIn();
+				$('#div2').fadeIn('slow');
+				$('#div3').fadeIn(2*1000);
+			})
+			
+		})
+		
+		$(document).ready(function(){
+			$('#id2').click(function(){
+				$('#div1').fadeTO('slow',0.11);
+				$('#div2').fadeTO('slow',0.4);
+				$('#div3').fadeTO(2*1000);
+			})
+			
+		})
+	</script>
+</head>
+
+<body>
+	<p>jquery Effect 알아보기</p>
+
+	<button id="id1">click</button>
+	<button id="id2">click</button>
+	
+	<div id="div1" style="width: 100px; height: 100px; display: none; background-color: red;"></div>
+	<div id="div2" style="width: 100px; height: 100px; display: none; background-color: green;"></div>
+	<div id="div3" style="width: 100px; height: 100px; display: none; background-color: yellow;"></div>
+</body>
+
+</html>
